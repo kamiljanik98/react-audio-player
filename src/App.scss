@@ -1,0 +1,51 @@
+// Box Sizing
+*,
+*::before,
+*::after {
+  box-sizing: none;
+}
+
+// Remove default margin
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+figure,
+hr,
+dl,
+dd,
+ul,
+ol,
+li,
+menu,
+nav {
+  margin: 0;
+}
+
+// Set consistent font properties
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  -ms-overflow-style: none;
+  
+  &::-webkit-scrollbar-button { display: none; }
+}
+
+// Remove default button styles
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  appearance: button;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* App.css */
