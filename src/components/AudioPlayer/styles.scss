@@ -261,7 +261,7 @@
       width: 13px;
       height: 13px;
       border: 0;
-      background: url("../../../../public/thumb.svg") no-repeat;
+      background: url("/public/thumb.svg") no-repeat;
       background-size: cover;
       cursor: pointer;
     }
@@ -302,7 +302,7 @@
     outline: none;
     opacity: 0.5;
     transition: opacity 0.2s;
-    background: url("../../../../public/grid.svg") no-repeat;
+    background: url("/public/grid.svg") no-repeat;
     background-size: cover;
     // border: 1px solid $grey-250;
     &:hover {
@@ -317,7 +317,7 @@
       height: 5px;
       width: 14px;
       border: 0;
-      background: url("../../../../public/anchor.svg") no-repeat;
+      background: url("/public/anchor.svg") no-repeat;
       background-size: cover;
       cursor: pointer;
     }
