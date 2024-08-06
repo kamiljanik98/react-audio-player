@@ -25,7 +25,7 @@ const playlist1 = [
     tempo: 76,
     title: "€gyptian",
     artist: "Jukka",
-    src: "/audio/track3.wav",
+    src: "/audio/track3.mp3",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const playlist1 = [
     tempo: 81,
     title: "1000s",
     artist: "Jukka",
-    src: "/audio/track4.wav",
+    src: "/audio/track4.mp3",
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const playlist1 = [
     tempo: 135,
     title: "Babylon",
     artist: "Jukka",
-    src: "/audio/track5.wav",
+    src: "/audio/track5.mp3",
   },
   {
     id: 6,
@@ -52,7 +52,7 @@ const playlist1 = [
     tempo: 138,
     title: "Bankov",
     artist: "Jukka",
-    src: "/audio/track6.wav",
+    src: "/audio/track6.mp3",
   },
   {
     id: 7,
@@ -61,7 +61,7 @@ const playlist1 = [
     tempo: 80,
     title: "CreamTrunk",
     artist: "Jukka",
-    src: "/audio/track7.wav",
+    src: "/audio/track7.mp3",
   },
   {
     id: 8,
@@ -70,7 +70,7 @@ const playlist1 = [
     tempo: 122,
     title: "LunaHD",
     artist: "Jukka",
-    src: "/audio/track8.wav",
+    src: "/audio/track8.mp3",
   },
   {
     id: 9,
@@ -79,7 +79,7 @@ const playlist1 = [
     tempo: 138,
     title: "Ligma",
     artist: "Jukka",
-    src: "/audio/track9.wav",
+    src: "/audio/track9.mp3",
   },
   {
     id: 10,
@@ -88,7 +88,7 @@ const playlist1 = [
     tempo: 115,
     title: "Summy",
     artist: "Jukka",
-    src: "/audio/track10.wav",
+    src: "/audio/track10.mp3",
   },
   {
     id: 11,
@@ -97,7 +97,7 @@ const playlist1 = [
     tempo: 146,
     title: "Babie",
     artist: "Jukka",
-    src: "/audio/track11.wav",
+    src: "/audio/track11.mp3",
   },
   {
     id: 12,
@@ -106,7 +106,7 @@ const playlist1 = [
     tempo: 136,
     title: "Santiago",
     artist: "Jukka",
-    src: "/audio/track12.wav",
+    src: "/audio/track12.mp3",
   },
   {
     id: 13,
@@ -115,7 +115,7 @@ const playlist1 = [
     tempo: 139,
     title: "Galyaah",
     artist: "Jukka",
-    src: "/audio/track13.wav",
+    src: "/audio/track13.mp3",
   },
   {
     id: 14,
@@ -133,7 +133,7 @@ const playlist1 = [
     tempo: 150,
     title: "Cuibk",
     artist: "Jukka",
-    src: "/audio/track15.wav",
+    src: "/audio/track15.mp3",
   },
 ];
 const playlist2 = [
@@ -144,7 +144,7 @@ const playlist2 = [
     tempo: 125,
     title: "Dring",
     artist: "Jukka",
-    src: "/audio/track16.wav",
+    src: "/audio/track16.mp3",
   },
   {
     id: 17,
@@ -153,7 +153,7 @@ const playlist2 = [
     tempo: 143,
     title: "cWhat",
     artist: "Jukka",
-    src: "/audio/track17.wav",
+    src: "/audio/track17.mp3",
   },
   {
     id: 18,
@@ -162,7 +162,7 @@ const playlist2 = [
     tempo: 80,
     title: "cDawg",
     artist: "Jukka",
-    src: "/audio/track18.wav",
+    src: "/audio/track18.mp3",
   },
   {
     id: 19,
@@ -171,7 +171,7 @@ const playlist2 = [
     tempo: 125,
     title: "Story",
     artist: "Jukka",
-    src: "/audio/track19.wav",
+    src: "/audio/track19.mp3",
   },
   {
     id: 20,
@@ -180,7 +180,7 @@ const playlist2 = [
     tempo: 128,
     title: "Xtra",
     artist: "Jukka",
-    src: "/audio/track20.wav",
+    src: "/audio/track20.mp3",
   },
   {
     id: 21,
@@ -189,7 +189,7 @@ const playlist2 = [
     tempo: 140,
     title: "Yushi",
     artist: "Jukka",
-    src: "/audio/track21.wav",
+    src: "/audio/track21.mp3",
   },
   {
     id: 22,
@@ -198,7 +198,7 @@ const playlist2 = [
     tempo: 73,
     title: "Maomam",
     artist: "Jukka",
-    src: "/audio/track22.wav",
+    src: "/audio/track22.mp3",
   },
   {
     id: 23,
@@ -207,7 +207,7 @@ const playlist2 = [
     tempo: 80,
     title: "Mymsg",
     artist: "Jukka",
-    src: "/audio/track23.wav",
+    src: "/audio/track23.mp3",
   },
   {
     id: 24,
@@ -216,7 +216,7 @@ const playlist2 = [
     tempo: 139,
     title: "Magnolee",
     artist: "Jukka",
-    src: "/audio/track24.wav",
+    src: "/audio/track24.mp3",
   },
   {
     id: 25,
@@ -225,7 +225,7 @@ const playlist2 = [
     tempo: 80,
     title: "Swang",
     artist: "Jukka",
-    src: "/audio/track25.wav",
+    src: "/audio/track25.mp3",
   },
   {
     id: 26,
@@ -234,7 +234,7 @@ const playlist2 = [
     tempo: 152,
     title: "Glitchmafia",
     artist: "Jukka",
-    src: "/audio/track26.wav",
+    src: "/audio/track26.mp3",
   },
   {
     id: 27,
@@ -243,7 +243,7 @@ const playlist2 = [
     tempo: 115,
     title: "Jangu ",
     artist: "Jukka",
-    src: "/audio/track27.wav",
+    src: "/audio/track27.mp3",
   },
   {
     id: 28,
@@ -252,7 +252,7 @@ const playlist2 = [
     tempo: 133,
     title: "zoooLyfe pt1",
     artist: "Jukka",
-    src: "/audio/track28.wav",
+    src: "/audio/track28.mp3",
   },
   {
     id: 29,
@@ -261,7 +261,7 @@ const playlist2 = [
     tempo: 138,
     title: "zoooLyfe pt2",
     artist: "Jukka",
-    src: "/audio/track28.wav",
+    src: "/audio/track28.mp3",
   },
   {
     id: 30,
@@ -270,7 +270,7 @@ const playlist2 = [
     tempo: 130,
     title: "zoooLyfe pt3",
     artist: "Jukka",
-    src: "/audio/track28.wav",
+    src: "/audio/track28.mp3",
   },
 ];
 
