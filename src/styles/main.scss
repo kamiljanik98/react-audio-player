@@ -41,6 +41,7 @@
     .full-control {
       display: flex;
       flex-direction: column;
+      padding: 0.75rem 1.5rem 1rem 1.5rem ;
 
       .player {
         display: flex;
@@ -72,6 +73,28 @@
 
     }
   }
+
+  .rate-container {
+    padding: 0;
+    margin: 0;
+  }
+
+  .seek-container {
+    padding: 0;
+    margin: 0;
+    .slider {
+      margin: 0;
+    }
+  }
+
+  .volume {
+    padding: 0;
+  }
+
+  .knob {
+    display: none;
+    margin: 0;
+  }
 }
 
 @media (max-width: 525px) {
@@ -98,6 +121,7 @@
 
     }
   }
+
 .tools {
 
   .more {
@@ -109,5 +133,10 @@
       justify-content: right;
     }
   }
+}
+
+.rate-container {
+  padding: 0;
+  margin: 0;
 }
 }

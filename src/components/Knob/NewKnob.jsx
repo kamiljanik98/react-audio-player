@@ -20,6 +20,11 @@ const NewKnob = ({ onChange, maxAngle, startAngle }) => {
   const indicatorRadius = 6; // Adjusted proportionally
 
   useEffect(() => {
+    const initialAngle = (maxAngle * 0.5);
+    setAngle(initialAngle);
+  }, [maxAngle]);
+
+  useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 

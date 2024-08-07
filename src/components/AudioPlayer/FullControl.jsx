@@ -27,7 +27,7 @@ class FullControl extends Component {
       loaded: false,
       loop: false,
       mute: false,
-      volume: 0.5, // Initialize with a volume of 0.5
+      volume: 285 / 2, // Initialize with a volume of 0.5
       seek: 0.0,
       rate: 1,
       isSeeking: false,

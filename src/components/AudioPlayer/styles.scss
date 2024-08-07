@@ -222,8 +222,10 @@
 }
 
 .volume {
+  max-width: 60px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
