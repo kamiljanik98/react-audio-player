@@ -31,3 +31,68 @@
   }
 }
 
+@media (max-width: 975px) {
+
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+
+    .full-control {
+      display: flex;
+      flex-direction: column;
+
+      .player {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 300px;
+      }
+
+    }
+  }
+
+  .more {
+    .icon {
+
+      display: flex;
+      width: 100px;
+      padding: 0;
+      margin: 0;
+      background-color: red;
+      justify-content: right;
+    }
+  }
+}
+
+@media (max-width: 525px) {
+
+  .wrapper {
+    
+    .full-control {
+      display: flex;
+      flex-direction: column;
+
+      .player {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 300px;
+      }
+
+    }
+  }
+
+  .more {
+    .icon {
+
+      display: flex;
+      width: 100px;
+      padding: 0;
+      margin: 0;
+      background-color: red;
+      justify-content: right;
+    }
+  }
+}

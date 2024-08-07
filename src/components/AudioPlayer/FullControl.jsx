@@ -69,16 +69,23 @@ class FullControl extends Component {
   }
 
   togglePlaylistVisibility() {
-    this.setState((prevState) => ({
-      showPlaylist: !prevState.showPlaylist,
-    }));
+    this.setState(
+      prevState => ({ 
+        showPlaylist: !prevState.showPlaylist, 
+        isFilterVisible: false 
+      }), 
+    );
   }
 
   toggleFilterVisibility() {
-    this.setState((prevState) => ({
-      isFilterVisible: !prevState.isFilterVisible,
-    }));
+    this.setState(
+      prevState => ({ 
+        isFilterVisible: !prevState.isFilterVisible, 
+        showPlaylist: false 
+      }), 
+    );
   }
+
 
   render() {
     const currentTrack = this.state.playlist[this.state.currentTrackIndex];
