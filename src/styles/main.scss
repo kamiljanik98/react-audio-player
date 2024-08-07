@@ -3,6 +3,7 @@
   align-items: start;
   height: 100vh;  
   justify-content: center;
+  align-items: center;
   
   .full-control {
     
@@ -10,7 +11,6 @@
     
     
     
-    margin-top: 51rem;
     @include glassmorph-1;
     padding: 0.5rem;
     padding-right: 0.75rem;
@@ -36,6 +36,7 @@
   .wrapper {
     width: 100%;
     height: 100vh;
+    align-items: center;
 
     .full-control {
       display: flex;
@@ -52,15 +53,23 @@
     }
   }
 
-  .more {
-    .icon {
-
-      display: flex;
-      width: 100px;
+  .tools {
+      
+    .more {
       padding: 0;
-      margin: 0;
-      background-color: red;
-      justify-content: right;
+      justify-content: center;
+      .icon {
+        display: flex;
+        margin: 0;
+      }
+    }
+    
+    .filter-section {
+      display: flex;
+      justify-content: left;
+      align-items: start;
+      left: 68px;
+
     }
   }
 }
@@ -68,10 +77,16 @@
 @media (max-width: 525px) {
 
   .wrapper {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    align-items: center;
     
     .full-control {
       display: flex;
       flex-direction: column;
+      padding: 2rem;
+      margin: 0;
 
       .player {
         display: flex;
@@ -83,16 +98,16 @@
 
     }
   }
+.tools {
 
   .more {
     .icon {
-
+      
       display: flex;
-      width: 100px;
       padding: 0;
       margin: 0;
-      background-color: red;
       justify-content: right;
     }
   }
+}
 }
