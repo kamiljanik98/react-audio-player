@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
   overflow: hidden; /* Prevent scrollbars from appearing */
@@ -8,8 +9,8 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: start; /* Aligns items at the start */
-  height: 100vh;  
-  
+  height: 100vh;
+
   .full-control {
     @include glassmorph-1;
     padding: 0.5rem 0.75rem; /* Simplified padding */
@@ -94,9 +95,6 @@ html, body {
     justify-content: right; /* Right alignment */
   }
 }
-
-
-
 
 button {
   background-color: transparent;

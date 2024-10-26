@@ -36,17 +36,17 @@
 .playlist-wrapper {
   display: flex;
   position: relative;
-  
+
   .playlist-container {
     border-radius: 6px;
     position: absolute;
-    top: -680%; 
+    top: -680%;
     height: 16rem;
     overflow-y: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none;
     // /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
-    z-index: 10; 
+    z-index: 10;
     // scrollbar-color: #14e40d #f1f1f1; /* Thumb color and track color */
   }
 
@@ -96,7 +96,6 @@
 
 // CUSTOM STYLES
 
-
 .filter-section {
   // min-width: 100px;
   @include glassmorph-1;
@@ -118,7 +117,7 @@
     font-weight: 400;
     padding-right: 0.5rem;
   }
-  
+
   .sorting {
     display: flex;
     flex-direction: column;
@@ -139,7 +138,7 @@
         border-radius: 0.35rem;
         padding: 0.4rem;
         border: 1px solid $grey-150;
-        
+
         &:hover {
           cursor: pointer;
           border-color: rgb(47, 78, 253);

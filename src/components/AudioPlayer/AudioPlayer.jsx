@@ -69,23 +69,18 @@ class AudioPlayer extends Component {
   }
 
   togglePlaylistVisibility() {
-    this.setState(
-      prevState => ({ 
-        showPlaylist: !prevState.showPlaylist, 
-        isFilterVisible: false 
-      }), 
-    );
+    this.setState((prevState) => ({
+      showPlaylist: !prevState.showPlaylist,
+      isFilterVisible: false,
+    }));
   }
 
   toggleFilterVisibility() {
-    this.setState(
-      prevState => ({ 
-        isFilterVisible: !prevState.isFilterVisible, 
-        showPlaylist: false 
-      }), 
-    );
+    this.setState((prevState) => ({
+      isFilterVisible: !prevState.isFilterVisible,
+      showPlaylist: false,
+    }));
   }
-
 
   render() {
     const currentTrack = this.state.playlist[this.state.currentTrackIndex];
@@ -110,9 +105,7 @@ class AudioPlayer extends Component {
           />
 
           <div className="player">
-
             <div className="tools">
-              
               <div className="more" onClick={this.toggleFilterVisibility}>
                 <div className="icon">
                   <CgMoreAlt />
@@ -121,34 +114,33 @@ class AudioPlayer extends Component {
 
               {this.state.isFilterVisible && (
                 <div className="filter-section">
-                    <div className="sorting">
-                      <h4>Filter by: </h4>
-                      <label>
-                        <select
-                          value={this.state.sortCriteria}
-                          onChange={this.handleSortChange}
-                        >
-                          <option value="tempo">Tempo</option>
-                          <option value="key">Key</option>
-                          <option value="scale">Scale</option>
-                        </select>
-                      </label>
+                  <div className="sorting">
+                    <h4>Filter by: </h4>
+                    <label>
+                      <select
+                        value={this.state.sortCriteria}
+                        onChange={this.handleSortChange}
+                      >
+                        <option value="tempo">Tempo</option>
+                        <option value="key">Key</option>
+                        <option value="scale">Scale</option>
+                      </select>
+                    </label>
                   </div>
 
-                    <div className="sorting">
-                      <h4>Pick playlist </h4>
-                      <label>
-                        <select
-                          value={this.state.activePlaylist}
-                          onChange={this.handlePlaylistChange}
-                        >
-                          <option value="playlist1">Jazhy Gen</option>
-                          <option value="playlist2">23 Here</option>
-                        </select>
-                      </label>
-                    </div>
-
+                  <div className="sorting">
+                    <h4>Pick playlist </h4>
+                    <label>
+                      <select
+                        value={this.state.activePlaylist}
+                        onChange={this.handlePlaylistChange}
+                      >
+                        <option value="playlist1">Jazhy Gen</option>
+                        <option value="playlist2">23 Here</option>
+                      </select>
+                    </label>
                   </div>
+                </div>
               )}
             </div>
 
@@ -246,13 +238,12 @@ class AudioPlayer extends Component {
                 startAngle={125}
                 maxAngle={285}
               /> */}
-               <NewKnob
+              <NewKnob
                 onChange={this.handleVolumeChange}
                 startAngle={125}
                 maxAngle={285}
               />
             </div>
-
           </div>
         </div>
       </div>

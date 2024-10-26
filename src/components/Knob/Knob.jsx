@@ -18,7 +18,7 @@ const NewKnob = ({ onChange, maxAngle, startAngle }) => {
   const indicatorRadius = 6; // Adjusted proportionally
 
   useEffect(() => {
-    const initialAngle = (maxAngle * 0.5);
+    const initialAngle = maxAngle * 0.5;
     setAngle(initialAngle);
   }, [maxAngle]);
 
@@ -90,7 +90,7 @@ const NewKnob = ({ onChange, maxAngle, startAngle }) => {
     setInitialMouseY(e.clientY);
     setInitialAngle(angle);
   };
-  
+
   const handleMouseMove = (
     e,
     isDragging,
@@ -108,7 +108,7 @@ const NewKnob = ({ onChange, maxAngle, startAngle }) => {
       setAngle(newAngle);
     }
   };
-  
+
   const handleMouseUp = (setIsDragging) => {
     setIsDragging(false);
   };
@@ -132,7 +132,6 @@ const NewKnob = ({ onChange, maxAngle, startAngle }) => {
       setContextMenu({ ...contextMenu, visible: false });
     }
   };
-
 
   useEffect(() => {
     window.addEventListener("click", handleClick);
