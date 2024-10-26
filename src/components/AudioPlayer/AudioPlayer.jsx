@@ -1,10 +1,10 @@
-// FullControl.jsx
+// AudioPlayer.jsx
 import { Component } from "react";
 import ReactHowler from "react-howler";
 // import Knob from "../Knob/Knob";
-import NewKnob from "../Knob/NewKnob";
+import NewKnob from "../Knob/Knob";
 
-import Playlist from "./Playlist"; // Import the Playlist component
+import Playlist from "../Playlist/Playlist"; // Import the Playlist component
 
 import { IoVolumeMute, IoVolumeMedium, IoRepeat } from "react-icons/io5";
 import {
@@ -15,10 +15,10 @@ import {
   CgPlayButton,
   CgMoreAlt,
 } from "react-icons/cg";
-import * as Utils from "./playerUtils"; // Import all utility functions
+import * as Utils from "./utils"; // Import all utility functions
 import { playlist1, playlist2 } from "./tracklist";
 
-class FullControl extends Component {
+class AudioPlayer extends Component {
   constructor(props) {
     super(props);
 
@@ -69,23 +69,18 @@ class FullControl extends Component {
   }
 
   togglePlaylistVisibility() {
-    this.setState(
-      prevState => ({ 
-        showPlaylist: !prevState.showPlaylist, 
-        isFilterVisible: false 
-      }), 
-    );
+    this.setState((prevState) => ({
+      showPlaylist: !prevState.showPlaylist,
+      isFilterVisible: false,
+    }));
   }
 
   toggleFilterVisibility() {
-    this.setState(
-      prevState => ({ 
-        isFilterVisible: !prevState.isFilterVisible, 
-        showPlaylist: false 
-      }), 
-    );
+    this.setState((prevState) => ({
+      isFilterVisible: !prevState.isFilterVisible,
+      showPlaylist: false,
+    }));
   }
-
 
   render() {
     const currentTrack = this.state.playlist[this.state.currentTrackIndex];
@@ -110,9 +105,7 @@ class FullControl extends Component {
           />
 
           <div className="player">
-
             <div className="tools">
-              
               <div className="more" onClick={this.toggleFilterVisibility}>
                 <div className="icon">
                   <CgMoreAlt />
@@ -121,34 +114,33 @@ class FullControl extends Component {
 
               {this.state.isFilterVisible && (
                 <div className="filter-section">
-                    <div className="sorting">
-                      <h4>Filter by: </h4>
-                      <label>
-                        <select
-                          value={this.state.sortCriteria}
-                          onChange={this.handleSortChange}
-                        >
-                          <option value="tempo">Tempo</option>
-                          <option value="key">Key</option>
-                          <option value="scale">Scale</option>
-                        </select>
-                      </label>
+                  <div className="sorting">
+                    <h4>Filter by: </h4>
+                    <label>
+                      <select
+                        value={this.state.sortCriteria}
+                        onChange={this.handleSortChange}
+                      >
+                        <option value="tempo">Tempo</option>
+                        <option value="key">Key</option>
+                        <option value="scale">Scale</option>
+                      </select>
+                    </label>
                   </div>
 
-                    <div className="sorting">
-                      <h4>Pick playlist </h4>
-                      <label>
-                        <select
-                          value={this.state.activePlaylist}
-                          onChange={this.handlePlaylistChange}
-                        >
-                          <option value="playlist1">Jazhy Gen</option>
-                          <option value="playlist2">23 Here</option>
-                        </select>
-                      </label>
-                    </div>
-
+                  <div className="sorting">
+                    <h4>Pick playlist </h4>
+                    <label>
+                      <select
+                        value={this.state.activePlaylist}
+                        onChange={this.handlePlaylistChange}
+                      >
+                        <option value="playlist1">Jazhy Gen</option>
+                        <option value="playlist2">23 Here</option>
+                      </select>
+                    </label>
                   </div>
+                </div>
               )}
             </div>
 
@@ -246,13 +238,12 @@ class FullControl extends Component {
                 startAngle={125}
                 maxAngle={285}
               /> */}
-               <NewKnob
+              <NewKnob
                 onChange={this.handleVolumeChange}
                 startAngle={125}
                 maxAngle={285}
               />
             </div>
-
           </div>
         </div>
       </div>
@@ -260,4 +251,4 @@ class FullControl extends Component {
   }
 }
 
-export default FullControl;
+export default AudioPlayer;
