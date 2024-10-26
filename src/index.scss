@@ -1,26 +1,22 @@
+// @import "./styles/variables.scss";
+// @import "./components/AudioPlayer/styles.scss";
+
+// @import "./styles/main.scss";
+
+
 @import "./App.scss";
-@import "./styles/variables.scss";
-@import "./components/AudioPlayer/styles.scss";
-
-@import "./styles/main.scss";
-
-@import "./components/AudioPlayer/player-styles/rateandseek.scss";
-@import "./components/AudioPlayer/player-styles/line.scss";
+@import "./components/VideoBackground/VideoBackground.scss";
 
 
 
-
-
-
-
-.playlist {
-    .playlist-item {
-
-        &::-webkit-scrollbar-button {
-            display: none;
-            padding: 2rem;
-            background-color: red;
-        }
-    }
-
-    }
+// .playlist {
+//     .playlist-item {
+        
+//         &::-webkit-scrollbar-button {
+//             display: none;
+//             padding: 2rem;
+//             background-color: red;
+//         }
+//     }
+    
+// }

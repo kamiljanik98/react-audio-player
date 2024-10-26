@@ -1,8 +1,8 @@
-// FullControl.jsx
+// AudioPlayer.jsx
 import { Component } from "react";
 import ReactHowler from "react-howler";
 // import Knob from "../Knob/Knob";
-import NewKnob from "../Knob/NewKnob";
+import NewKnob from "../Knob/Knob";
 
 import Playlist from "./Playlist"; // Import the Playlist component
 
@@ -18,7 +18,7 @@ import {
 import * as Utils from "./playerUtils"; // Import all utility functions
 import { playlist1, playlist2 } from "./tracklist";
 
-class FullControl extends Component {
+class AudioPlayer extends Component {
   constructor(props) {
     super(props);
 
@@ -260,4 +260,4 @@ class FullControl extends Component {
   }
 }
 
-export default FullControl;
+export default AudioPlayer;
