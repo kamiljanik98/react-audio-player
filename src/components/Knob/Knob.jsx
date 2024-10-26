@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 
 import { useState, useEffect, useRef } from "react";
-import { handleMouseDown, handleMouseMove, handleMouseUp } from "./utils";
-import "./Knob.scss";
 
 const NewKnob = ({ onChange, maxAngle, startAngle }) => {
   const [angle, setAngle] = useState(0);
@@ -81,6 +79,40 @@ const NewKnob = ({ onChange, maxAngle, startAngle }) => {
     }
   }, [angle, startAngle, maxAngle, onChange]);
 
+  const handleMouseDown = (
+    e,
+    setIsDragging,
+    setInitialMouseY,
+    setInitialAngle,
+    angle,
+  ) => {
+    setIsDragging(true);
+    setInitialMouseY(e.clientY);
+    setInitialAngle(angle);
+  };
+  
+  const handleMouseMove = (
+    e,
+    isDragging,
+    setAngle,
+    initialMouseY,
+    initialAngle,
+    maxAngle,
+  ) => {
+    if (isDragging) {
+      const deltaY = e.clientY - initialMouseY;
+      const newAngle = Math.max(
+        0,
+        Math.min(maxAngle, initialAngle - deltaY * 16),
+      ); // Adjust sensitivity as needed
+      setAngle(newAngle);
+    }
+  };
+  
+  const handleMouseUp = (setIsDragging) => {
+    setIsDragging(false);
+  };
+
   const handleContextMenu = (e) => {
     e.preventDefault();
     setContextMenu({
@@ -100,6 +132,7 @@ const NewKnob = ({ onChange, maxAngle, startAngle }) => {
       setContextMenu({ ...contextMenu, visible: false });
     }
   };
+
 
   useEffect(() => {
     window.addEventListener("click", handleClick);

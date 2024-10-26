@@ -3,3 +3,119 @@ html, body {
   padding: 0; /* Remove default padding */
   overflow: hidden; /* Prevent scrollbars from appearing */
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: start; /* Aligns items at the start */
+  height: 100vh;  
+  
+  .full-control {
+    @include glassmorph-1;
+    padding: 0.5rem 0.75rem; /* Simplified padding */
+    border-radius: 0.25rem;
+    position: relative;
+
+    .player {
+      color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+}
+
+@media (max-width: 975px) {
+  .wrapper {
+    width: 100%;
+    align-items: center; /* Center alignment */
+
+    .full-control {
+      flex-direction: column; /* Stack vertically */
+      padding: 0.75rem 1.5rem 1rem;
+
+      .player {
+        flex-direction: column;
+        align-items: center;
+        height: 300px;
+      }
+    }
+  }
+
+  .tools {
+    .more {
+      padding: 0;
+      justify-content: center;
+      .icon {
+        margin: 0; /* Removed redundant display: flex */
+      }
+    }
+
+    .filter-section {
+      display: flex;
+      justify-content: left;
+      align-items: start;
+      left: 68px;
+    }
+  }
+
+  .rate-container,
+  .seek-container,
+  .volume {
+    padding: 0;
+    margin: 0;
+  }
+
+  .seek-container .slider {
+    margin: 0;
+  }
+
+  .knob {
+    display: none;
+    margin: 0;
+  }
+}
+
+@media (max-width: 525px) {
+  .wrapper {
+    padding: 0;
+    margin: 0;
+
+    .full-control {
+      padding: 2rem;
+
+      .player {
+        height: 300px; /* Maintain height */
+      }
+    }
+  }
+
+  .tools .more .icon {
+    justify-content: right; /* Right alignment */
+  }
+}
+
+
+
+
+button {
+  background-color: transparent;
+  // background-color: white;
+  color: white;
+  display: flex;
+  align-items: center;
+  border: none;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+
+  :nth-child(1) {
+    padding: 0.25rem;
+    font-size: 1.5rem;
+
+    &:hover {
+      transition: 0.1s;
+      cursor: pointer;
+      color: $prim;
+    }
+  }
+}

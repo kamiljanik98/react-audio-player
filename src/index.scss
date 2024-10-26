@@ -1,22 +1,13 @@
-// @import "./styles/variables.scss";
-// @import "./components/AudioPlayer/styles.scss";
 
-// @import "./styles/main.scss";
-
+@import "./styles/variables.scss";
 
 @import "./App.scss";
-@import "./components/VideoBackground/VideoBackground.scss";
+
+@import "./components/Knob/Knob";
+@import "./components/VideoBackground/VideoBackground";
+@import "./components/Playlist/Playlist";
+@import "./components/AudioPlayer/AudioPlayer";
 
 
 
-// .playlist {
-//     .playlist-item {
-        
-//         &::-webkit-scrollbar-button {
-//             display: none;
-//             padding: 2rem;
-//             background-color: red;
-//         }
-//     }
-    
-// }
+

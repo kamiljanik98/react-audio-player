@@ -4,7 +4,7 @@ import ReactHowler from "react-howler";
 // import Knob from "../Knob/Knob";
 import NewKnob from "../Knob/Knob";
 
-import Playlist from "./Playlist"; // Import the Playlist component
+import Playlist from "../Playlist/Playlist"; // Import the Playlist component
 
 import { IoVolumeMute, IoVolumeMedium, IoRepeat } from "react-icons/io5";
 import {
@@ -15,7 +15,7 @@ import {
   CgPlayButton,
   CgMoreAlt,
 } from "react-icons/cg";
-import * as Utils from "./playerUtils"; // Import all utility functions
+import * as Utils from "./utils"; // Import all utility functions
 import { playlist1, playlist2 } from "./tracklist";
 
 class AudioPlayer extends Component {

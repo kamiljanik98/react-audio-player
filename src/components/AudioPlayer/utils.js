@@ -120,7 +120,6 @@ export const handleRate = (component, e) => {
   component.setState({ rate })
 }
 
-
 export const handleSelectTrack = (component, index) => {
   component.setState({
     currentTrackIndex: index,
