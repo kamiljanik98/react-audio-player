@@ -27,5 +27,4 @@ RateBar.propTypes = {
   onRateChange: PropTypes.func.isRequired,
 };
 
-
 export default RateBar;

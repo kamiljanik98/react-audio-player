@@ -29,9 +29,8 @@ const Playlist = ({ playlist, onSelectTrack }) => {
 };
 
 Playlist.propTypes = {
-  playlist: PropTypes.array.isRequired,          // An array of track objects to be displayed in the playlist (required)
-  onSelectTrack: PropTypes.func.isRequired,      // Callback function to handle the selection of a track from the playlist (required)
+  playlist: PropTypes.array.isRequired, // An array of track objects to be displayed in the playlist (required)
+  onSelectTrack: PropTypes.func.isRequired, // Callback function to handle the selection of a track from the playlist (required)
 };
-
 
 export default Playlist;

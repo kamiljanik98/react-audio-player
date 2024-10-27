@@ -84,7 +84,6 @@ export const handleMouseUpSeek = (component, e) => {
   component.player.seek(e.target.value);
 };
 
-
 export const handleOnPlay = (component) => {
   component.setState({
     playing: true,
@@ -129,13 +128,11 @@ export const handleOnEnd = (component) => {
   clearRAF(component);
 };
 
-
 export const handleMuteToggle = (component) => {
   component.setState((prevState) => ({
     mute: !prevState.mute,
   }));
 };
-
 
 export const handleSelectTrack = (component, index) => {
   component.setState({
@@ -144,7 +141,6 @@ export const handleSelectTrack = (component, index) => {
     playing: true,
   });
 };
-
 
 export const renderSeekPos = (component) => {
   if (!component.state.isSeeking) {
@@ -156,4 +152,3 @@ export const renderSeekPos = (component) => {
     component._raf = raf(() => renderSeekPos(component));
   }
 };
-

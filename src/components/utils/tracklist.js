@@ -1,5 +1,5 @@
 // src/playlist.js
-export const playlist= [
+export const playlist = [
   {
     id: 1,
     scale: "minor",

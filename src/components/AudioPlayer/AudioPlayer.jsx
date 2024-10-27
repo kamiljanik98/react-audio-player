@@ -27,7 +27,7 @@ import {
   handleMuteToggle,
   handleSelectTrack,
 } from "../utils/utils"; // Import utility functions individually
-import { playlist }  from "../utils/tracklist";
+import { playlist } from "../utils/tracklist";
 
 class AudioPlayer extends Component {
   constructor(props) {
@@ -50,7 +50,6 @@ class AudioPlayer extends Component {
       sortCriteria: "tempo",
       duration: 0, // Initialize duration here
     };
-    
   }
 
   componentWillUnmount() {
@@ -118,9 +117,6 @@ class AudioPlayer extends Component {
     handleSelectTrack(this, index);
   };
 
-
-
-
   render() {
     const currentTrack = this.state.playlist[this.state.currentTrackIndex];
 
@@ -139,45 +135,54 @@ class AudioPlayer extends Component {
           ref={(ref) => (this.player = ref)}
         />
 
-          <button onClick={() => this.setState((prevState) => ({ showPlaylist: !prevState.showPlaylist }))}>
-            {this.state.showPlaylist ? "Hide Playlist" : "Show Playlist"}
-          </button>
+        <button
+          onClick={() =>
+            this.setState((prevState) => ({
+              showPlaylist: !prevState.showPlaylist,
+            }))
+          }
+        >
+          {this.state.showPlaylist ? "Hide Playlist" : "Show Playlist"}
+        </button>
 
-          {this.state.showPlaylist && (
-            <Playlist
-              playlist={this.state.playlist}
-              onSelectTrack={this.handleSelectTrack}
-            />
-          )}
-
-          <Controls
-            playing={this.state.playing}
-            onToggle={this.handleToggle}
-            onStop={this.handleStop}
-            onPrevious={this.handlePreviousTrack}
-            onNext={this.handleNextTrack}
+        {this.state.showPlaylist && (
+          <Playlist
+            playlist={this.state.playlist}
+            onSelectTrack={this.handleSelectTrack}
           />
+        )}
 
-          <RateBar rate={this.state.rate} onRateChange={this.handleRate} />
+        <Controls
+          playing={this.state.playing}
+          onToggle={this.handleToggle}
+          onStop={this.handleStop}
+          onPrevious={this.handlePreviousTrack}
+          onNext={this.handleNextTrack}
+        />
 
-          <SeekBar
-            seek={this.state.seek}
-            duration={this.state.duration}
-            onSeekingChange={this.handleSeekingChange}
-            onSeekStart={this.handleMouseDownSeek}
-            onSeekEnd={this.handleMouseUpSeek}
-          />
+        <RateBar rate={this.state.rate} onRateChange={this.handleRate} />
 
-          <Toggle
-            loop={this.state.loop}
-            mute={this.state.mute}
-            onLoopToggle={this.handleLoopToggle}
-            onMuteToggle={this.handleMuteToggle}
-          />
+        <SeekBar
+          seek={this.state.seek}
+          duration={this.state.duration}
+          onSeekingChange={this.handleSeekingChange}
+          onSeekStart={this.handleMouseDownSeek}
+          onSeekEnd={this.handleMouseUpSeek}
+        />
 
-        
-          <Knob onChange={this.handleVolumeChange} startAngle={125} maxAngle={285} />
-        </div>
+        <Toggle
+          loop={this.state.loop}
+          mute={this.state.mute}
+          onLoopToggle={this.handleLoopToggle}
+          onMuteToggle={this.handleMuteToggle}
+        />
+
+        <Knob
+          onChange={this.handleVolumeChange}
+          startAngle={125}
+          maxAngle={285}
+        />
+      </div>
     );
   }
 }
