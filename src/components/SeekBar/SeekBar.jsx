@@ -8,19 +8,17 @@ const SeekBar = ({
   onSeekEnd,
 }) => (
   <div className="seek">
-    <div className="seek-container">
-      <input
-        className="slider"
-        type="range"
-        min="0"
-        max={duration ? duration.toFixed(2) : 0}
-        step=".01"
-        value={seek}
-        onChange={onSeekingChange}
-        onMouseDown={onSeekStart}
-        onMouseUp={onSeekEnd}
-      />
-    </div>
+    <input
+      className="slider"
+      type="range"
+      min="0"
+      max={duration ? duration.toFixed(2) : 0}
+      step=".01"
+      value={seek}
+      onChange={onSeekingChange}
+      onMouseDown={onSeekStart}
+      onMouseUp={onSeekEnd}
+    />
   </div>
 );
 

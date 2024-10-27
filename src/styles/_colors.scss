@@ -1,23 +1,19 @@
-$grey-100: #f7f7f7;
-$grey-150: hsl(0, 0%, 80%);
+// src/styles/_variables.scss
 
-$grey-200: #d3d3d3;
-$grey-250: #8f8f8f;
-$grey-300: #383838;
-$grey-400: #1c1c1c;
-$grey-500: #070707;
+// Define your color variables
+$grayscale_50: #fefeff;
+$grayscale_100: #f1f5f9;
+$grayscale_200: #e2e8f0;
+$grayscale_300: #cbd5e1;
+$grayscale_400: #94a3b8;
+$grayscale_500: #64748b;
+$grayscale_600: #475569;
+$grayscale_700: #334155;
+$grayscale_800: #1e293b;
+$grayscale_900: #0f172a;
+$grayscale_950: #020617;
 
-$grey-50: #ececec;
-
-$prim: #22c55e;
-
-// Font Sizes
-$fs-min: 11px;
-$fs-base: 12px;
-$fs-xxs: 14px;
-$fs-xs: 15px;
-$fs-s: 16px;
-$fs-root: 18px;
+$prim: #1979f7;
 
 @mixin glassmorph-1 {
   background: rgba(151, 151, 151, 0.15);
@@ -30,7 +26,6 @@ $fs-root: 18px;
 
 @mixin glassmorph-2 {
   background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10.5px);
   -webkit-backdrop-filter: blur(10.5px);
   border-radius: 10px;
