@@ -1,36 +1,59 @@
-// src/components/AudioPlayer/Playlist.jsx
+import { useState } from "react";
 import PropTypes from "prop-types";
 
-const Playlist = ({ playlist, onSelectTrack }) => {
-  return (
-    <div className="playlist">
-      {playlist.map((track, index) => (
-        <div
-          key={track.id}
-          className="playlist-item"
-          onClick={() => onSelectTrack(index)}
-        >
-          <div className="header">
-            <p>
-              <strong>{track.title}</strong>
-            </p>
-            <p>{track.artist}</p>
-          </div>
+const Playlist = ({ playlist, onSelectTrack, currentTrack }) => {
+  const [showPlaylist, setShowPlaylist] = useState(false);
 
-          <p className="tempo">{track.tempo}</p>
-          <p>
-            {track.key}
-            {track.scale}
-          </p>
+  const togglePlaylist = () => {
+    setShowPlaylist((prevShow) => !prevShow);
+  };
+
+  const truncateText = (text) => {
+    return text.length > 20 ? `${text.substring(0, 20)}...` : text;
+  };
+
+  const currentTrackName =
+    currentTrack.title + " " + "by" + " " + currentTrack.artist;
+
+  return (
+    <>
+      {/* Current track display as toggle for the playlist */}
+      <div className="current-track" onClick={togglePlaylist}>
+        <p>{truncateText(currentTrackName)}| </p>
+      </div>
+
+      {showPlaylist && (
+        <div className="playlist">
+          {playlist.map((track, index) => (
+            <div
+              key={track.id}
+              className="playlist-item"
+              onClick={() => onSelectTrack(index)}
+            >
+              <div className="track-id">
+                <p>
+                  <strong>{truncateText(track.title)}</strong>
+                </p>
+                <p>{truncateText(track.artist)}</p>
+              </div>
+
+              <p className="track-tempo">{track.tempo}</p>
+              <p className="track-tonic">
+                {track.key}
+                {track.scale}
+              </p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      )}
+    </>
   );
 };
 
 Playlist.propTypes = {
   playlist: PropTypes.array.isRequired, // An array of track objects to be displayed in the playlist (required)
   onSelectTrack: PropTypes.func.isRequired, // Callback function to handle the selection of a track from the playlist (required)
+  currentTrack: PropTypes.object.isRequired, // The currently playing track (required)
 };
 
 export default Playlist;

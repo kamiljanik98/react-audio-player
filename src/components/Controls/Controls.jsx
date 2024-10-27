@@ -10,16 +10,16 @@ import {
 const Controls = ({ playing, onToggle, onStop, onPrevious, onNext }) => (
   <div className="controls">
     <button onClick={onToggle}>
-      {playing ? <CgPlayPause size={24} /> : <CgPlayButton size={24} />}
+      {playing ? <CgPlayPause size={28} /> : <CgPlayButton size={28} />}
     </button>
     <button onClick={onStop}>
-      <CgPlayStop size={24} />
+      <CgPlayStop size={28} />
     </button>
     <button onClick={onPrevious}>
-      <CgPlayBackwards size={24} />
+      <CgPlayBackwards size={28} />
     </button>
     <button onClick={onNext}>
-      <CgPlayForwards size={24} />
+      <CgPlayForwards size={28} />
     </button>
   </div>
 );

@@ -135,22 +135,11 @@ class AudioPlayer extends Component {
           ref={(ref) => (this.player = ref)}
         />
 
-        <button
-          onClick={() =>
-            this.setState((prevState) => ({
-              showPlaylist: !prevState.showPlaylist,
-            }))
-          }
-        >
-          {this.state.showPlaylist ? "Hide Playlist" : "Show Playlist"}
-        </button>
-
-        {this.state.showPlaylist && (
-          <Playlist
-            playlist={this.state.playlist}
-            onSelectTrack={this.handleSelectTrack}
-          />
-        )}
+        <Playlist
+          playlist={this.state.playlist}
+          onSelectTrack={this.handleSelectTrack}
+          currentTrack={currentTrack} // Pass the current track
+        />
 
         <Controls
           playing={this.state.playing}
@@ -160,8 +149,6 @@ class AudioPlayer extends Component {
           onNext={this.handleNextTrack}
         />
 
-        <RateBar rate={this.state.rate} onRateChange={this.handleRate} />
-
         <SeekBar
           seek={this.state.seek}
           duration={this.state.duration}
@@ -169,6 +156,8 @@ class AudioPlayer extends Component {
           onSeekStart={this.handleMouseDownSeek}
           onSeekEnd={this.handleMouseUpSeek}
         />
+
+        <RateBar rate={this.state.rate} onRateChange={this.handleRate} />
 
         <Toggle
           loop={this.state.loop}

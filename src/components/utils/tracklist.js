@@ -5,7 +5,7 @@ export const playlist = [
     scale: "minor",
     key: "D",
     tempo: 140,
-    title: "O.G Lover",
+    title: "O.G Lover asdasdasdasdasdas",
     artist: "Jukka & O.G",
     src: "/audio/track1.mp3",
   },
