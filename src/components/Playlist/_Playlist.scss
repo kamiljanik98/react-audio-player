@@ -1,153 +1,153 @@
-.playlist {
-  @include glassmorph-2;
-  width: 196px;
-  color: white;
-  padding: 0.5rem;
-  .playlist-item {
-    display: flex;
-    flex-direction: row;
-    font-size: 0.5rem;
-    padding: 0.5rem;
-    align-items: start;
-    .header {
-      min-width: 50%;
-    }
-    .tempo {
-      max-height: 36px;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      min-width: 40px;
-      font-size: 0.65rem;
-      font-weight: 600;
-    }
-    p {
-      font-size: 0.65rem;
-    }
-    &:hover {
-      border-radius: 2px;
-      color: $prim;
-      cursor: pointer;
-      background-color: rgba($color: #030303, $alpha: 0.35);
-      border-radius: 4px;
-    }
-  }
-}
-.playlist-wrapper {
-  display: flex;
-  position: relative;
+// .playlist {
+//   @include glassmorph-2;
+//   width: 196px;
+//   color: white;
+//   padding: 0.5rem;
+//   .playlist-item {
+//     display: flex;
+//     flex-direction: row;
+//     font-size: 0.5rem;
+//     padding: 0.5rem;
+//     align-items: start;
+//     .header {
+//       min-width: 50%;
+//     }
+//     .tempo {
+//       // max-height: 36px;
+//       // align-items: center;
+//       // display: flex;
+//       justify-content: center;
+//       min-width: 40px;
+//       font-size: 0.65rem;
+//       font-weight: 600;
+//     }
+//     p {
+//       font-size: 0.65rem;
+//     }
+//     &:hover {
+//       border-radius: 2px;
+//       color: $prim;
+//       cursor: pointer;
+//       background-color: rgba($color: #030303, $alpha: 0.35);
+//       border-radius: 4px;
+//     }
+//   }
+// }
+// .playlist-wrapper {
+//   display: flex;
+//   position: relative;
 
-  .playlist-container {
-    border-radius: 6px;
-    position: absolute;
-    top: -680%;
-    height: 16rem;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    // /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
-    z-index: 10;
-    // scrollbar-color: #14e40d #f1f1f1; /* Thumb color and track color */
-  }
+//   .playlist-container {
+//     border-radius: 6px;
+//     position: absolute;
+//     top: -680%;
+//     height: 16rem;
+//     overflow-y: scroll;
+//     scroll-behavior: smooth;
+//     scrollbar-width: none;
+//     // /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+//     z-index: 10;
+//     // scrollbar-color: #14e40d #f1f1f1; /* Thumb color and track color */
+//   }
 
-  .display {
-    color: rgb(241, 241, 241);
-    @include glassmorph-3;
-    border-radius: 0.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 12rem;
-    cursor: pointer; // Indicate that the display is clickable
-    padding: 10px;
-    // border: 1px solid $grey-200;
+//   .display {
+//     color: rgb(241, 241, 241);
+//     @include glassmorph-3;
+//     border-radius: 0.25rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 12rem;
+//     cursor: pointer; // Indicate that the display is clickable
+//     padding: 10px;
+//     // border: 1px solid $grey-200;
 
-    .status {
-      display: flex;
-      align-items: center;
-      padding: 0;
-      margin: 0;
-      font-size: 0.75rem;
-      p {
-        text-align: center;
-      }
-    }
-    .track-info {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      width: 12rem;
-      font-size: 0.75rem;
-      text-align: center;
+//     .status {
+//       display: flex;
+//       align-items: center;
+//       padding: 0;
+//       margin: 0;
+//       font-size: 0.75rem;
+//       p {
+//         text-align: center;
+//       }
+//     }
+//     .track-info {
+//       display: flex;
+//       justify-content: center;
+//       flex-direction: row;
+//       width: 12rem;
+//       font-size: 0.75rem;
+//       text-align: center;
 
-      p {
-        margin: 0;
-        strong {
-          font-weight: lighter;
-          letter-spacing: 0.04rem;
-        }
-        .artist {
-          font-style: italic;
-        }
-      }
-    }
-  }
-}
+//       p {
+//         margin: 0;
+//         strong {
+//           font-weight: lighter;
+//           letter-spacing: 0.04rem;
+//         }
+//         .artist {
+//           font-style: italic;
+//         }
+//       }
+//     }
+//   }
+// }
 
-// CUSTOM STYLES
+// // CUSTOM STYLES
 
-.filter-section {
-  // min-width: 100px;
-  @include glassmorph-1;
-  display: flex;
-  align-items: start;
-  position: absolute;
-  top: -145px;
-  flex-direction: column;
-  left: 20px;
-  padding: 0.5rem;
-  border-radius: 4px;
-  justify-content: space-between;
-  min-height: 7.25rem;
+// .filter-section {
+//   // min-width: 100px;
+//   @include glassmorph-1;
+//   display: flex;
+//   align-items: start;
+//   position: absolute;
+//   top: -145px;
+//   flex-direction: column;
+//   left: 20px;
+//   padding: 0.5rem;
+//   border-radius: 4px;
+//   justify-content: space-between;
+//   min-height: 7.25rem;
 
-  h4 {
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
-    font-size: $fs-min;
-    font-weight: 400;
-    padding-right: 0.5rem;
-  }
+//   h4 {
+//     margin-top: 0.25rem;
+//     margin-bottom: 0.25rem;
+//     font-size: $fs-min;
+//     font-weight: 400;
+//     padding-right: 0.5rem;
+//   }
 
-  .sorting {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    label {
-      display: flex;
-      justify-content: center;
-      select {
-        @include glassmorph-3;
-        color: white;
-        font-family: "Inter", sans-serif;
-        font-weight: 400;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        font-size: 0.75rem;
-        width: 6.5rem;
-        border-radius: 0.35rem;
-        padding: 0.4rem;
-        border: 1px solid $grey-150;
+//   .sorting {
+//     display: flex;
+//     flex-direction: column;
+//     padding: 0;
+//     label {
+//       display: flex;
+//       justify-content: center;
+//       select {
+//         @include glassmorph-3;
+//         color: white;
+//         font-family: "Inter", sans-serif;
+//         font-weight: 400;
+//         -webkit-appearance: none;
+//         -moz-appearance: none;
+//         appearance: none;
+//         font-size: 0.75rem;
+//         width: 6.5rem;
+//         border-radius: 0.35rem;
+//         padding: 0.4rem;
+//         border: 1px solid $grey-150;
 
-        &:hover {
-          cursor: pointer;
-          border-color: rgb(47, 78, 253);
-        }
-        option {
-          font-size: 0.75rem;
-          text-align: left;
-        }
-      }
-    }
-  }
-}
+//         &:hover {
+//           cursor: pointer;
+//           border-color: rgb(47, 78, 253);
+//         }
+//         option {
+//           font-size: 0.75rem;
+//           text-align: left;
+//         }
+//       }
+//     }
+//   }
+// }
