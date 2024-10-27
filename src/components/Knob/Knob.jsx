@@ -1,8 +1,7 @@
-/* eslint-disable react/prop-types */
-
 import { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 
-const NewKnob = ({ onChange, maxAngle, startAngle }) => {
+const Knob = ({ onChange, maxAngle, startAngle }) => {
   const [angle, setAngle] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [contextMenu, setContextMenu] = useState(0);
@@ -181,4 +180,10 @@ const NewKnob = ({ onChange, maxAngle, startAngle }) => {
   );
 };
 
-export default NewKnob;
+Knob.propTypes = {
+  onChange: PropTypes.func.isRequired, // Function to call when the knob value changes
+  maxAngle: PropTypes.number.isRequired, // Maximum angle for the knob
+  startAngle: PropTypes.number.isRequired, // Starting angle for the knob
+};
+
+export default Knob;

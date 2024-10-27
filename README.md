@@ -26,7 +26,8 @@ Audio player web application built using React, Vite, ESLint, Prettier, and Sass
 ## Installation
 
 1. Clone the repository:
-```bash
+
+````bash
    git clone https://github.com/your-username/audioplayer-app.git
 
 2. Navigate to the project directory:
@@ -40,3 +41,4 @@ Audio player web application built using React, Vite, ESLint, Prettier, and Sass
 4. Start the development server:
 ```bash
    npm run dev
+````
