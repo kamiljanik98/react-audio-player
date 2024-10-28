@@ -15,10 +15,6 @@
 
 This audio player web app is built to provide users with easy playback controls and a clear, responsive interface. It displays playlists, allowing users to select and play tracks seamlessly. The app includes a customized: volume knob, rate bar and seek bar.
 
-![App Screenshot](./public/screenshot.png)
-
-![App Screenshot](./public/screenshot.png)
-
 Live Demo: "Coming soon"
 
 ## Features
@@ -41,18 +37,28 @@ Live Demo: "Coming soon"
 
 ## Setup
 
-1. Navigate to the project directory:
-```
-$ cd react-weather-forecast
-```
-2. Install dependencies:
-```
-$ npm install
-```
-3. Start the development server:
-```
-$ npm run dev
-```
+1. **Clone the repository**:
+
+  ```bash
+  git clone https://github.com/your-username/audioplayer-app.git
+  ```
+
+2. Navigate to the project directory:
+   
+  ```
+  $ cd react-weather-forecast
+  ```
+
+3. Install dependencies:
+   
+  ```
+  $ npm install
+  ```
+
+4. Start the development server:
+  ```
+  $ npm run dev
+  ```
 
 ## License
 
