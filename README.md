@@ -1,4 +1,4 @@
-# React Audio Player
+# Audio Player
 
 ![App Screenshot](./public/screenshot.png)
 
