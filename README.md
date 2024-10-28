@@ -1,50 +1,59 @@
-# About
+# Audio Player Web Application
 
-Audio player web application built using React, Vite, ESLint, Prettier, and Sass. This app allows users to play audio files with a clean and user-friendly interface.
+![App Screenshot](./public/screenshot.png)
 
-# Live Demo
+## Table of Contents
 
-"Coming soon"
+- [About](#about)
+- [Live Demo](#live-demo)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup](#setup)
+- [License](#license)
+
+## About
+
+This audio player web app is built to provide users with easy playback controls and a clear, responsive interface. It displays playlists, allowing users to select and play tracks seamlessly. The app includes a customized: volume knob, rate bar and seek bar.
+
+![App Screenshot](./public/screenshot.png)
+
+![App Screenshot](./public/screenshot.png)
+
+Live Demo: "Coming soon"
 
 ## Features
 
-- Play, pause, and skip tracks
-- Pick & filter playlist
-- Volume control
-- Playlist management
-- Custom Knob component
-- Responsivness
+- **Play, Pause, and Skip Controls**: Easily control playback of audio files.
+- **Loop & Mute Toggles**: Options to loop tracks and mute audio.
+- **SeekBar with Customized Display**: A visual control for navigating tracks.
+- **RateBar**: Allows tempo and pitch manipulation.
+- **Volume Control**: Adjust volume via a customized "Knob" component.
+- **Background Video**: Enhances user experience with a dynamic background.
 
 ## Technologies Used
 
-- **React**: JavaScript library for building user interfaces
-- **Vite**: Fast build tool and development server
-- **ESLint**: Linting utility for JavaScript
-- **Prettier**: Code formatter
-- **Sass**: CSS preprocessor for styling
+- **React**: JavaScript library for building user interfaces.
+- **Vite**: Fast build tool and development server.
+- **ESLint & Prettier**: Code linting and formatting tools for a consistent codebase.
+- **Sass**: CSS preprocessor for styling.
+- **React-Howler**: Audio library for managing audio playback.
+- **PropTypes**: Library for type-checking React component props.
 
-## Installation
+## Setup
 
-1. Clone the repository:
-
-```bash
-   git clone https://github.com/your-username/audioplayer-app.git
+1. Navigate to the project directory:
+```
+$ cd react-weather-forecast
+```
+2. Install dependencies:
+```
+$ npm install
+```
+3. Start the development server:
+```
+$ npm run dev
 ```
 
-2. Navigate to the project directory:
+## License
 
-```bash
-   cd audioplayer-app
-```
-
-3. Install dependencies:
-
-```bash
-   npm install
-```
-
-4. Start the development server:
-
-```bash
-   npm run dev
-```
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
