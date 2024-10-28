@@ -2,15 +2,6 @@
 
 ![App Screenshot](./public/screenshot.png)
 
-## Table of Contents
-
-- [About](#about)
-- [Live Demo](#live-demo)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Setup](#setup)
-- [License](#license)
-
 ## About
 
 This audio player web app is built to provide users with easy playback controls and a clear, responsive interface. It displays playlists, allowing users to select and play tracks seamlessly. The app includes a customized: volume knob, rate bar and seek bar.
