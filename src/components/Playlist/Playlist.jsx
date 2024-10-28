@@ -9,7 +9,7 @@ const Playlist = ({ playlist, onSelectTrack, currentTrack }) => {
   };
 
   const truncateText = (text) => {
-    return text.length > 20 ? `${text.substring(0, 20)}...` : text;
+    return text.length > 15 ? `${text.substring(0, 15)}...` : text;
   };
 
   const currentTrackName =
@@ -19,7 +19,7 @@ const Playlist = ({ playlist, onSelectTrack, currentTrack }) => {
     <>
       {/* Current track display as toggle for the playlist */}
       <div className="current-track" onClick={togglePlaylist}>
-        <p>{truncateText(currentTrackName)}| </p>
+        <p>{truncateText(currentTrackName)} </p>
       </div>
 
       {showPlaylist && (
