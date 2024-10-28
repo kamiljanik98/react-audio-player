@@ -40,13 +40,13 @@ Live Demo: "Coming soon"
 1. **Clone the repository**:
 
   ```bash
-  git clone https://github.com/your-username/audioplayer-app.git
+  git clone https://github.com/yaneczq/react-audio-player.git
   ```
 
 2. Navigate to the project directory:
    
   ```
-  $ cd react-weather-forecast
+  $ cd react-audio-player
   ```
 
 3. Install dependencies:
