@@ -1,5 +1,5 @@
 .audio-player {
-  @include glassmorph-1;
+  @include glassmorph;
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -9,16 +9,17 @@
   padding: 12px;
   padding-left: 0;
   left: 50%;
-  top: 50%;
+  top: 75%;
   transform: translateX(-50%) translateY(-50%);
 }
 
 @media (max-width: 992px) {
   .audio-player {
     padding: 24px;
-    padding-top: 10px;
+    padding-top: 0px;
     font-size: $fs_base;
-    @include glassmorph-2;
+    @include glassmorph;
+    top: 50%;
     gap: 48px;
     flex-direction: column;
   }

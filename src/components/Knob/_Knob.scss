@@ -5,7 +5,7 @@
   margin-left: 1rem;
   margin-right: 0.25rem;
   background-color: black;
-  @include glassmorph-5;
+  @include glassmorph_deep;
   border-radius: 2rem;
   canvas:active {
     cursor: none;
@@ -19,7 +19,6 @@
 
 .context-menu {
   position: absolute;
-  background-color: #fff;
   border-radius: 4px;
   z-index: 1000;
 }

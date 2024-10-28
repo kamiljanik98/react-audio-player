@@ -1,5 +1,5 @@
 .playlist {
-  @include glassmorph-3;
+  @include glassmorph;
   border-radius: 8px;
   position: fixed;
   left: 0;
@@ -12,7 +12,7 @@
 
   /* WebKit scrollbar styling */
   &::-webkit-scrollbar {
-    width: 4px; /* Increased width for better visibility */
+    width: 4px;
     height: 8px;
 
     &:hover {
@@ -21,17 +21,17 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: transparent; /* Track color */
-    border-radius: 10px; /* Optional: round the track edges */
+    background: transparent;
+    border-radius: 10px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba($grayscale_200, 0.35); /* Thumb color */
-    border-radius: 10px; /* Round the corners */
+    background-color: rgba($grayscale_200, 0.35);
+    border-radius: 10px;
 
     &:hover {
       cursor: pointer;
-      background: rgba($grayscale_100, 0.85); /* Darker thumb on hover */
+      background: rgba($grayscale_100, 0.85);
     }
   }
 }
@@ -92,7 +92,7 @@
   .playlist {
     height: 132px;
     left: 42px;
-    bottom: 392px;
+    bottom: 396px;
   }
 
   .playlist-item {

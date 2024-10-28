@@ -3,6 +3,7 @@
   flex-direction: column;
   padding: 0 12px;
   opacity: 0.5;
+  gap: 2px;
   transition: opacity 0.2s;
   margin-top: 4px;
   &:hover {
@@ -23,21 +24,20 @@
 }
 
 .rate-slider {
-  @include glassmorph-4;
+  @include inset;
   appearance: none;
   width: 100px;
   height: 0.3rem;
   border-radius: 5px;
   box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.3); /* inner shadow */
-  
+
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    @include glassmorph-3;
     width: 14px;
     height: 14px;
     border: 0;
     background: url("/public/icons/thumb.svg") no-repeat center;
-    background-size: contain; 
+    background-size: contain;
     cursor: pointer;
   }
 }

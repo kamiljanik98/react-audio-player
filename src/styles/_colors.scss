@@ -16,16 +16,16 @@ $grayscale_950: #020617;
 $prim: #2f89ff;
 $sec: #7df719;
 
-@mixin glassmorph-1 {
+@mixin glassmorph {
   background: rgba(151, 151, 151, 0.15);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  backdrop-filter: blur(1.75px);
+  backdrop-filter: blur(5.75px);
   // -webkit-backdrop-filter: blur(0.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-@mixin glassmorph-2 {
+@mixin glassmorph_dark {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10.5px);
   -webkit-backdrop-filter: blur(10.5px);
@@ -33,19 +33,13 @@ $sec: #7df719;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-@mixin glassmorph-3 {
-  background: rgba(0, 0, 0, 0.15);
-  -webkit-backdrop-filter: blur(0.5px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-@mixin glassmorph-4 {
+@mixin inset {
   background: rgba(0, 0, 0, 0.15);
   -webkit-backdrop-filter: blur(0.05px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-@mixin glassmorph-5 {
+@mixin glassmorph_deep {
   background: rgba(0, 0, 0, 0.4);
   -webkit-backdrop-filter: blur(0.05px);
   border: 1px solid rgba(0, 0, 0, 0.18);
