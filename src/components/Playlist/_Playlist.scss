@@ -9,10 +9,12 @@
   color: white;
   overflow-y: scroll;
   scroll-behavior: smooth;
+
   /* WebKit scrollbar styling */
   &::-webkit-scrollbar {
     width: 4px; /* Increased width for better visibility */
     height: 8px;
+
     &:hover {
       width: 24px;
     }
@@ -26,23 +28,23 @@
   &::-webkit-scrollbar-thumb {
     background-color: rgba($grayscale_200, 0.35); /* Thumb color */
     border-radius: 10px; /* Round the corners */
-  }
 
-  &::-webkit-scrollbar-thumb:hover {
-    cursor: pointer;
-    background: rgba($grayscale_100, 0.85); /* Darker thumb on hover */
+    &:hover {
+      cursor: pointer;
+      background: rgba($grayscale_100, 0.85); /* Darker thumb on hover */
+    }
   }
 }
 
 .playlist-item {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   opacity: 0.5;
   font-size: $fs_xxs;
   padding: 0.5rem;
   width: 172px;
-  align-items: center;
-  justify-content: space-between;
 
   .track-id {
     min-width: 50%;
@@ -55,10 +57,9 @@
   }
 
   &:hover {
-    border-radius: 2px;
-    opacity: 1;
     cursor: pointer;
-    background-color: rgba($color: #030303, $alpha: 0.35);
+    opacity: 1;
+    background-color: rgba(#030303, 0.35);
     border-radius: 4px;
   }
 }
@@ -67,24 +68,35 @@
   text-align: center;
   background-color: rgba($grayscale_950, 0.15);
   color: $grayscale_100;
-  font-size: $fs_xs;
-  box-shadow: inset;
-  padding: 8px 0px;
+  font-size: $fs_xxs;
+  padding: 8px 0;
   min-width: 156px;
   border: 1px solid rgba($grayscale_200, 0.3);
   border-radius: 4px;
   box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition:
+    border-color 0.5s,
+    background-color 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $prim;
+    background-color: rgba($grayscale_950, 0.3);
+    transition:
+      border-color 0.3s,
+      background-color 0.3s;
+  }
 }
 
 @media (max-width: 992px) {
   .playlist {
     height: 132px;
-    left: 0;
-    bottom: 348px;
-    padding: 8px;
+    left: 42px;
+    bottom: 392px;
   }
+
   .playlist-item {
-    width: 252px;
+    width: 176px;
   }
 
   .current-track {

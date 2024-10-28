@@ -12,8 +12,8 @@ const Knob = ({ onChange, maxAngle, startAngle }) => {
   const centerRef = useRef({ x: 0, y: 0 });
   const indicatorRef = useRef({ x: 0, y: 0 });
 
-  const canvasSize = 30; // Reduced size
-  const radius = 12; // Half of the canvas size for outer circle
+  const canvasSize = 35; // Reduced size
+  const radius = 14; // Half of the canvas size for outer circle
   const indicatorRadius = 6; // Adjusted proportionally
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const Knob = ({ onChange, maxAngle, startAngle }) => {
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius, startAngleRad, 2.25 * Math.PI);
     ctx.strokeStyle = "#121212";
-    ctx.lineWidth = 1.5; // Adjusted line width
+    ctx.lineWidth = 2.5; // Adjusted line width
     ctx.stroke();
 
     // Draw the arc indicating the current angle
