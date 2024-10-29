@@ -37,18 +37,18 @@ Live Demo: "Coming soon"
 2. Navigate to the project directory:
    
   ```
-  $ cd react-audio-player
+  cd react-audio-player
   ```
 
 3. Install dependencies:
    
   ```
-  $ npm install
+  npm install
   ```
 
 4. Start the development server:
   ```
-  $ npm run dev
+  npm run dev
   ```
 
 ## License
