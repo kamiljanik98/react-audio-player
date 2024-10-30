@@ -6,7 +6,7 @@
 
 This audio player web app is built to provide users with easy playback controls and a clear, responsive interface. It displays playlists, allowing users to select and play tracks seamlessly. The app includes a customized: volume knob, rate bar and seek bar.
 
-Live Demo: "Coming soon"
+Live Demo [here](https://rap-jk.vercel.app/).
 
 ## Features
 
