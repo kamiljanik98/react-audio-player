@@ -97,7 +97,6 @@ const handleMouseUpSeek = (component, e) => {
 const handleOnPlay = (component) => {
   // Update playing state
   component.setState({ playing: true }, () => {
-    // Now we can safely check the updated state
     if (!component.state.isSeeking) {
       // Update the seek position immediately when the track starts playing
       component.setState({

@@ -10,6 +10,7 @@ const SeekBar = ({
 }) => (
   <div className={styles.seek}>
     <input
+      aria-label="Seekbar"
       type="range"
       min="0"
       max={duration ? duration.toFixed(2) : 0}
