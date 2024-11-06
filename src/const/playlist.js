@@ -1,4 +1,3 @@
-// src/playlist.js
 export const playlist = [
   {
     id: 1,

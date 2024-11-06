@@ -1,3 +1,6 @@
+@use "../../styles/colors" as *;
+@use "../../styles/typography" as *;
+
 .playlist {
   @include glassmorph;
   border-radius: 8px;
@@ -36,7 +39,7 @@
   }
 }
 
-.playlist-item {
+.playlistItem {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -46,11 +49,11 @@
   padding: 0.5rem;
   width: 172px;
 
-  .track-id {
+  .trackID {
     min-width: 50%;
   }
 
-  .track-tempo {
+  .trackTempo {
     justify-content: center;
     font-size: $fs_xxs;
     font-weight: 600;
@@ -64,7 +67,7 @@
   }
 }
 
-.current-track {
+.currentTrack {
   text-align: center;
   background-color: rgba($grayscale_950, 0.15);
   color: $grayscale_100;
@@ -95,11 +98,11 @@
     bottom: 396px;
   }
 
-  .playlist-item {
+  .playlistItem {
     width: 176px;
   }
 
-  .current-track {
+  .currentTrack {
     width: 212px;
 
     p {

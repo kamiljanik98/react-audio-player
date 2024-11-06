@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect, useRef } from "react";
+import styles from "./VideoBackground.module.scss";
 
 const VideoBackground = ({ src, children }) => {
   const videoRef = useRef(null);
@@ -23,9 +24,16 @@ const VideoBackground = ({ src, children }) => {
   }, []);
 
   return (
-    <div className="video-background">
-      <video ref={videoRef} className="video" src={src} autoPlay loop muted />
-      <div className="overlay">{children}</div>
+    <div className={styles.videoBackground}>
+      <video
+        ref={videoRef}
+        className={styles.video}
+        src={src}
+        autoPlay
+        loop
+        muted
+      />
+      <div className={styles.overlay}>{children}</div>
     </div>
   );
 };

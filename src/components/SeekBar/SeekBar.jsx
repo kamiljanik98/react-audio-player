@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import styles from "./SeekBar.module.scss";
 
 const SeekBar = ({
   seek,
@@ -7,9 +8,8 @@ const SeekBar = ({
   onSeekStart,
   onSeekEnd,
 }) => (
-  <div className="seek">
+  <div className={styles.seek}>
     <input
-      className="slider"
       type="range"
       min="0"
       max={duration ? duration.toFixed(2) : 0}

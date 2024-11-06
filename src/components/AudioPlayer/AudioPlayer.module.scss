@@ -1,4 +1,7 @@
-.audio-player {
+@use "../../styles/colors" as *;
+@use "../../styles/typography" as *;
+
+.audioPlayer {
   @include glassmorph;
   position: fixed;
   display: flex;
@@ -14,7 +17,7 @@
 }
 
 @media (max-width: 992px) {
-  .audio-player {
+  .audioPlayer {
     padding: 24px;
     padding-top: 0px;
     font-size: $fs_base;
@@ -22,9 +25,5 @@
     top: 50%;
     gap: 36px;
     flex-direction: column;
-  }
-
-  .react-howler {
-    display: none;
   }
 }

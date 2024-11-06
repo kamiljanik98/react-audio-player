@@ -1,15 +1,3 @@
-@import "./styles/typography";
-@import "./styles/colors";
-
+@use "./styles/colors" as *;
+@use "./styles/typography" as *;
 @import "./App.scss";
-
-@import "./components/Knob/Knob";
-@import "./components/Controls/Controls";
-@import "./components/SeekBar/SeekBar";
-@import "./components/RateBar/RateBar";
-
-@import "./components/Toggles/Toggles";
-@import "./components/Playlist/Playlist";
-
-@import "./components/AudioPlayer/AudioPlayer";
-@import "./components/VideoBackground/VideoBackground";

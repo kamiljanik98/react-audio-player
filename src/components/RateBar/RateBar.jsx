@@ -1,10 +1,12 @@
 // src/components/RateBar.jsx
 import PropTypes from "prop-types";
+import styles from "./RateBar.module.scss";
 
 const RateBar = ({ rate, onRateChange }) => (
-  <div className="rate-bar">
+  <div className={styles.rateBar}>
     <input
-      className="rate-slider"
+      aria-label="Ratebar"
+      className={styles.rateSlider}
       type="range"
       min="0.6"
       max="1.4"
@@ -12,7 +14,7 @@ const RateBar = ({ rate, onRateChange }) => (
       value={rate}
       onChange={onRateChange} // Pass the event directly
     />
-    <div className="rate-range">
+    <div className={styles.rateRange}>
       <p>&nbsp;</p>
       <p> | </p>
       <p> | </p>

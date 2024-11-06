@@ -1,4 +1,5 @@
-// AudioPlayer.jsx
+import raf from "raf"; // requestAnimationFrame polyfill
+
 import { Component } from "react";
 import ReactHowler from "react-howler";
 import Knob from "../Knob/Knob";
@@ -6,28 +7,170 @@ import Controls from "../Controls/Controls";
 import RateBar from "../RateBar/RateBar";
 import SeekBar from "../SeekBar/SeekBar";
 import Toggle from "../Toggles/Toggles";
-import Playlist from "../Playlist/Playlist";
-// import FilterMenu from "../FilterMenu/FilterMenu"; // Import the new FilterMenu component
+import Playlist from "../PlaylistDisplay/PlaylistDisplay";
+import styles from "./AudioPlayer.module.scss";
+import { playlist } from "../../const/playlist";
 
-import {
-  handleOnLoad,
-  handleToggle,
-  handleNextTrack,
-  handlePreviousTrack,
-  handleStop,
-  handleVolumeChange,
-  handleLoopToggle,
-  handleRate,
-  clearRAF,
-  handleSeekingChange,
-  handleMouseDownSeek,
-  handleMouseUpSeek,
-  handleOnPlay,
-  handleOnEnd,
-  handleMuteToggle,
-  handleSelectTrack,
-} from "../utils/utils"; // Import utility functions individually
-import { playlist } from "../utils/tracklist";
+const handleOnLoad = (component) => {
+  const currentTrack =
+    component.state.playlist[component.state.currentTrackIndex];
+  component.setState({
+    loaded: true,
+    duration: component.player.duration(),
+    trackName: currentTrack.title,
+    artist: currentTrack.artist,
+  });
+};
+
+const handleToggle = (component) => {
+  component.setState((prevState) => ({
+    playing: !prevState.playing,
+  }));
+};
+
+const handleNextTrack = (component) => {
+  component.setState((prevState) => {
+    const nextIndex =
+      (prevState.currentTrackIndex + 1) % prevState.playlist.length;
+    return { currentTrackIndex: nextIndex, loaded: false };
+  });
+};
+
+const handlePreviousTrack = (component) => {
+  component.setState((prevState) => {
+    const prevIndex =
+      (prevState.currentTrackIndex - 1 + prevState.playlist.length) %
+      prevState.playlist.length;
+    return { currentTrackIndex: prevIndex, loaded: false };
+  });
+};
+
+const handleStop = (component) => {
+  component.player.stop();
+  component.setState({
+    playing: false, // Need to update our local state so we don't immediately invoke autoplay
+  });
+  renderSeekPos(component);
+};
+
+const handleVolumeChange = (component, value) => {
+  const normalizedValue = Math.min(1, Math.max(0, value / 100));
+  component.setState({ volume: normalizedValue });
+};
+
+const handleLoopToggle = (component) => {
+  component.setState((prevState) => ({
+    loop: !prevState.loop,
+  }));
+};
+
+const handleRate = (component, e) => {
+  const rate = parseFloat(e.target.value);
+  component.player.rate(rate);
+  component.setState({ rate });
+};
+
+const clearRAF = (component) => {
+  raf.cancel(component._raf);
+};
+
+const handleSeekingChange = (component, e) => {
+  component.setState({
+    seek: parseFloat(e.target.value),
+  });
+};
+
+const handleMouseDownSeek = (component) => {
+  component.setState({
+    isSeeking: true,
+  });
+};
+
+const handleMouseUpSeek = (component, e) => {
+  component.setState({
+    isSeeking: false,
+  });
+
+  component.player.seek(e.target.value);
+};
+
+const handleOnPlay = (component) => {
+  // Update playing state
+  component.setState({ playing: true }, () => {
+    // Now we can safely check the updated state
+    if (!component.state.isSeeking) {
+      // Update the seek position immediately when the track starts playing
+      component.setState({
+        seek: component.player.seek(), // Get the current seek position
+      });
+    }
+
+    // Start the render loop if the track is playing
+    component._raf = raf(() => renderSeekPos(component));
+  });
+};
+
+const renderSeekPos = (component) => {
+  if (!component.state.isSeeking) {
+    component.setState({
+      seek: component.player.seek(),
+    });
+  }
+  if (component.state.playing) {
+    component._raf = raf(() => renderSeekPos(component));
+  }
+};
+
+const handleOnEnd = (component) => {
+  const { loop, currentTrackIndex, playlist } = component.state;
+
+  if (loop) {
+    // Restart the current track
+    component.setState(
+      {
+        playing: true,
+      },
+      () => {
+        if (component.player) {
+          component.player.howler.stop(); // Stop the current track
+          component.player.howler.play(); // Play the current track again
+        }
+      },
+    );
+  } else {
+    // Move to the next track
+    const nextTrackIndex = (currentTrackIndex + 1) % playlist.length;
+
+    component.setState(
+      {
+        currentTrackIndex: nextTrackIndex,
+        playing: true,
+      },
+      () => {
+        if (component.player) {
+          component.player.howler.stop(); // Stop the current track
+          component.player.howler.play(); // Play the next track
+        }
+      },
+    );
+  }
+
+  clearRAF(component);
+};
+
+const handleMuteToggle = (component) => {
+  component.setState((prevState) => ({
+    mute: !prevState.mute,
+  }));
+};
+
+const handleSelectTrack = (component, index) => {
+  component.setState({
+    currentTrackIndex: index,
+    loaded: false,
+    playing: true,
+  });
+};
 
 class AudioPlayer extends Component {
   constructor(props) {
@@ -44,9 +187,8 @@ class AudioPlayer extends Component {
       isSeeking: false,
       currentTrackIndex: 0,
       playlist: playlist,
-      activePlaylist: "playlist1",
+      activePlaylist: "playlist",
       showPlaylist: false,
-      isFilterVisible: false,
       sortCriteria: "tempo",
       duration: 0, // Initialize duration here
     };
@@ -121,7 +263,7 @@ class AudioPlayer extends Component {
     const currentTrack = this.state.playlist[this.state.currentTrackIndex];
 
     return (
-      <div className="audio-player">
+      <div className={styles.audioPlayer}>
         <ReactHowler
           src={[currentTrack.src]}
           playing={this.state.playing}

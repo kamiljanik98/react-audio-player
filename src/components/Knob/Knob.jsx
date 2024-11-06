@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import styles from "./Knob.module.scss";
 
 const Knob = ({ onChange, maxAngle, startAngle }) => {
   const [angle, setAngle] = useState(0);
@@ -7,15 +8,15 @@ const Knob = ({ onChange, maxAngle, startAngle }) => {
   const [contextMenu, setContextMenu] = useState(0);
   const [initialMouseY, setInitialMouseY] = useState(0);
   const [initialAngle, setInitialAngle] = useState(0);
-
+  
   const canvasRef = useRef(null);
   const centerRef = useRef({ x: 0, y: 0 });
   const indicatorRef = useRef({ x: 0, y: 0 });
-
+  
   const canvasSize = 35; // Reduced size
   const radius = 14; // Half of the canvas size for outer circle
   const indicatorRadius = 6; // Adjusted proportionally
-
+  
   useEffect(() => {
     const initialAngle = maxAngle * 0.5;
     setAngle(initialAngle);
@@ -138,7 +139,7 @@ const Knob = ({ onChange, maxAngle, startAngle }) => {
   });
 
   return (
-    <div className="knob">
+    <div className={styles.knob}>
       <canvas
         ref={canvasRef}
         width={canvasSize}
@@ -168,7 +169,7 @@ const Knob = ({ onChange, maxAngle, startAngle }) => {
       />
       {contextMenu.visible && (
         <div
-          className="context-menu"
+          className={styles.contextMenu}
           style={{
             left: contextMenu.X,
           }}

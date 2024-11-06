@@ -1,44 +1,41 @@
 import { useState } from "react";
+import { truncateText } from "../utils/truncateText";
 import PropTypes from "prop-types";
+import styles from "./PlaylistDisplay.module.scss";
 
 const Playlist = ({ playlist, onSelectTrack, currentTrack }) => {
   const [showPlaylist, setShowPlaylist] = useState(false);
-
+  const currentTrackName = currentTrack.title + " " + "by" + " " + currentTrack.artist;
+  
   const togglePlaylist = () => {
     setShowPlaylist((prevShow) => !prevShow);
   };
 
-  const truncateText = (text) => {
-    return text.length > 15 ? `${text.substring(0, 15)}...` : text;
-  };
-
-  const currentTrackName =
-    currentTrack.title + " " + "by" + " " + currentTrack.artist;
 
   return (
     <>
       {/* Current track display as toggle for the playlist */}
-      <div className="current-track" onClick={togglePlaylist}>
+      <div className={styles.currentTrack} onClick={togglePlaylist}>
         <p>{truncateText(currentTrackName)} </p>
       </div>
 
       {showPlaylist && (
-        <div className="playlist">
+        <div className={styles.playlist}>
           {playlist.map((track, index) => (
             <div
               key={track.id}
-              className="playlist-item"
+              className={styles.playlistItem}
               onClick={() => onSelectTrack(index)}
             >
-              <div className="track-id">
+              <div className={styles.trackID}>
                 <p>
                   <strong>{truncateText(track.title)}</strong>
                 </p>
                 <p>{truncateText(track.artist)}</p>
               </div>
 
-              <p className="track-tempo">{track.tempo}</p>
-              <p className="track-tonic">
+              <p className={styles.trackTempo}>{track.tempo}</p>
+              <p className={styles.trackTonic}>
                 {track.key}
                 {track.scale}
               </p>

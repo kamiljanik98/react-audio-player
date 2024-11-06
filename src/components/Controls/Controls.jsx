@@ -6,19 +6,20 @@ import {
   CgPlayForwards,
   CgPlayStop,
 } from "react-icons/cg";
+import styles from "./Controls.module.scss";
 
 const Controls = ({ playing, onToggle, onStop, onPrevious, onNext }) => (
-  <div className="controls">
-    <button onClick={onToggle}>
+  <div className={styles.controls}>
+    <button aria-label="PlayPause" onClick={onToggle}>
       {playing ? <CgPlayPause size={28} /> : <CgPlayButton size={28} />}
     </button>
-    <button onClick={onStop}>
+    <button aria-label="Stop" onClick={onStop}>
       <CgPlayStop size={28} />
     </button>
-    <button onClick={onPrevious}>
+    <button aria-label="Previous" onClick={onPrevious}>
       <CgPlayBackwards size={28} />
     </button>
-    <button onClick={onNext}>
+    <button aria-label="Next" onClick={onNext}>
       <CgPlayForwards size={28} />
     </button>
   </div>

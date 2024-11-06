@@ -1,4 +1,7 @@
-.rate-bar {
+@use "../../styles/colors" as *;
+@use "../../styles/typography" as *;
+
+.rateBar {
   display: flex;
   flex-direction: column;
   padding: 0 12px;
@@ -11,7 +14,7 @@
   }
 }
 
-.rate-range {
+.rateRange {
   color: $grayscale_200;
   p {
     margin: 0;
@@ -23,7 +26,7 @@
   justify-content: space-around;
 }
 
-.rate-slider {
+.rateSlider {
   @include inset;
   appearance: none;
   width: 100px;
@@ -36,25 +39,25 @@
     width: 14px;
     height: 14px;
     border: 0;
-    background: url("/public/icons/thumb.svg") no-repeat center;
+    background: url("/icons/thumb.svg") no-repeat center;
     background-size: contain;
     cursor: pointer;
   }
 }
 @media (max-width: 992px) {
-  .rate-slider {
+  .rateSlider {
     appearance: none;
     width: 125px;
     height: 0.5rem;
     border-radius: 5px;
     box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.3); /* inner shadow */
-  
+
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       width: 18px;
       height: 18px;
       border: 0;
-      background: url("/public/icons/thumb.svg") no-repeat center;
+      background: url("/icons/thumb.svg") no-repeat center;
       background-size: contain;
       cursor: pointer;
     }
