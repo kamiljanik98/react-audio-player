@@ -1,4 +1,4 @@
-// src/components/RateBar.jsx
+import React from "react";
 import PropTypes from "prop-types";
 import styles from "./RateBar.module.scss";
 

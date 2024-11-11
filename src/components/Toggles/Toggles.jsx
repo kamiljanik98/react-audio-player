@@ -1,4 +1,4 @@
-// Components/Toggle.jsx
+import React from "react";
 import PropTypes from "prop-types"; // Import PropTypes
 import { IoVolumeMute, IoVolumeMedium, IoRepeat } from "react-icons/io5";
 import styles from "./Toggles.module.scss";

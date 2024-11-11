@@ -1,25 +1,15 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import legacy from '@vitejs/plugin-legacy';
+import { defineConfig } from "vite";
+import legacy from "@vitejs/plugin-legacy";
+
+const legacyPluginOptions = {
+  modernTargets: "since 2023-01-01, not dead",
+  modernPolyfills: true,
+  renderLegacyChunks: false,
+};
 
 export default defineConfig({
-  plugins: [
-    react(),
-    legacy({
-      targets: ['defaults', 'not IE 11'], // Specify the browser targets for legacy support
-      additionalLegacyPolyfills: ['regenerator-runtime/runtime'], // Include polyfills for older browsers if needed
-    }),
-  ],
+  plugins: [legacy(legacyPluginOptions)],
   build: {
-    sourcemap: true,  // Enable source maps to improve debugging and coverage analysis
-    rollupOptions: {
-      output: {
-        // Optionally, configure further output splitting or file naming
-        manualChunks: {
-          // Customize chunks if necessary, for example, split libraries into separate files
-          vendor: ['react', 'react-dom', 'react-icons', 'react-howler']
-        },
-      },
-    },
+    target: ["chrome109", "edge109", "firefox109", "ios16.3", "safari16.3"],
   },
 });

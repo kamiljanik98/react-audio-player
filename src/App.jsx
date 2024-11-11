@@ -1,3 +1,4 @@
+import React from 'react';
 import AudioPlayer from "./components/AudioPlayer/AudioPlayer";
 import VideoBackground from "./components/VideoBackground/VideoBackground";
 

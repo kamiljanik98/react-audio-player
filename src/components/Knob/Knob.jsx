@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import styles from "./Knob.module.scss";

@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from "prop-types";
 import { useEffect, useRef } from "react";
 import styles from "./VideoBackground.module.scss";

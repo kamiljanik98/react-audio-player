@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { truncateText } from "../utils/truncateText";
 import PropTypes from "prop-types";
