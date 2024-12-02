@@ -32,41 +32,29 @@
     }
   }
   @media (max-width: 992px) {
-    // input[type="range"] {
-    //   appearance: none; /* Remove default appearance */
-    //   width: 182px; /* Desired width */
-    //   height: 6px; /* Track height */
-    //   background: #ddd; /* Track background */
-    //   cursor: pointer;
-    //   outline: none; /* Remove outline */
-    //   @include glassmorph_deep;
-    // }
 
-    /* Styling the track */
     input[type="range"]::-webkit-slider-runnable-track {
       height: 3px;
       border-radius: 10px;
     }
 
-    /* Styling the thumb */
+
     input[type="range"]::-webkit-slider-thumb {
       appearance: none;
       display: flex;
-      width: 10px; /* Thumb width */
-      height: 24px; /* Thumb height */
-      background: $prim; /* Thumb background color */
+      width: 10px; 
+      height: 24px; 
+      background: $prim; 
       transform: translateY(-45%);
       border-radius: 4px;
       cursor: pointer;
       transition: transform 0.2s ease-in-out;
     }
 
-    /* Optional: Change thumb size on hover */
     input[type="range"]::-webkit-slider-thumb:hover {
       transform: scale(1.2) translateY(-40%);
     }
 
-    /* Optional: Change thumb size on active state */
     input[type="range"]::-webkit-slider-thumb:active {
       transform: scale(1.3) translateY(-30%);
     }

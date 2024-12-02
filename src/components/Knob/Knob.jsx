@@ -14,9 +14,9 @@ const Knob = ({ onChange, maxAngle, startAngle }) => {
   const centerRef = useRef({ x: 0, y: 0 });
   const indicatorRef = useRef({ x: 0, y: 0 });
   
-  const canvasSize = 35; // Reduced size
-  const radius = 14; // Half of the canvas size for outer circle
-  const indicatorRadius = 6; // Adjusted proportionally
+  const canvasSize = 35; 
+  const radius = 14; 
+  const indicatorRadius = 6;
   
   useEffect(() => {
     const initialAngle = maxAngle * 0.5;
@@ -51,27 +51,24 @@ const Knob = ({ onChange, maxAngle, startAngle }) => {
     const endAngleRad = (arcEndAngle * Math.PI) / 180;
     const startAngleRad = (arcStartAngle * Math.PI) / 180;
 
-    // Draw the knob's outer circle
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius, startAngleRad, 2.25 * Math.PI);
     ctx.strokeStyle = "#121212";
-    ctx.lineWidth = 2.5; // Adjusted line width
+    ctx.lineWidth = 2.5; 
     ctx.stroke();
 
-    // Draw the arc indicating the current angle
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius, startAngleRad, endAngleRad);
     ctx.strokeStyle = arcColor;
-    ctx.lineWidth = 1.5; // Adjusted line width
+    ctx.lineWidth = 1.5;
     ctx.stroke();
 
-    // Draw the indicator
     const angleRad = ((angle + startAngle) * Math.PI) / 180;
     const endX = centerX + indicatorRadius * Math.cos(angleRad);
     const endY = centerY + indicatorRadius * Math.sin(angleRad);
 
     ctx.beginPath();
-    ctx.arc(endX, endY, 1.25, 0, 2 * Math.PI); // Adjusted indicator size
+    ctx.arc(endX, endY, 1.25, 0, 2 * Math.PI);
     ctx.fillStyle = indicatorColor;
     ctx.fill();
 
@@ -105,7 +102,7 @@ const Knob = ({ onChange, maxAngle, startAngle }) => {
       const newAngle = Math.max(
         0,
         Math.min(maxAngle, initialAngle - deltaY * 16),
-      ); // Adjust sensitivity as needed
+      );
       setAngle(newAngle);
     }
   };
@@ -183,9 +180,9 @@ const Knob = ({ onChange, maxAngle, startAngle }) => {
 };
 
 Knob.propTypes = {
-  onChange: PropTypes.func.isRequired, // Function to call when the knob value changes
-  maxAngle: PropTypes.number.isRequired, // Maximum angle for the knob
-  startAngle: PropTypes.number.isRequired, // Starting angle for the knob
+  onChange: PropTypes.func.isRequired, 
+  maxAngle: PropTypes.number.isRequired, 
+  startAngle: PropTypes.number.isRequired,
 };
 
 export default Knob;

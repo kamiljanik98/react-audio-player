@@ -12,7 +12,7 @@ const RateBar = ({ rate, onRateChange }) => (
       max="1.4"
       step="0.2"
       value={rate}
-      onChange={onRateChange} // Pass the event directly
+      onChange={onRateChange} 
     />
     <div className={styles.rateRange}>
       <p>&nbsp;</p>

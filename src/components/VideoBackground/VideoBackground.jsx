@@ -9,8 +9,8 @@ const VideoBackground = ({ src, children }) => {
   useEffect(() => {
     const videoElement = videoRef.current;
     const handleEnded = () => {
-      videoElement.currentTime = 0; // Restart the video
-      videoElement.play(); // Play it again
+      videoElement.currentTime = 0; 
+      videoElement.play(); 
     };
 
     if (videoElement) {
@@ -41,7 +41,7 @@ const VideoBackground = ({ src, children }) => {
 
 VideoBackground.propTypes = {
   src: PropTypes.string.isRequired,
-  children: PropTypes.node, // Accepts children to overlay on the video
+  children: PropTypes.node,
 };
 
 export default VideoBackground;

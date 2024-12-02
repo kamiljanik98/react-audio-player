@@ -15,7 +15,6 @@ const Playlist = ({ playlist, onSelectTrack, currentTrack }) => {
 
   return (
     <>
-      {/* Current track display as toggle for the playlist */}
       <div className={styles.currentTrack} onClick={togglePlaylist}>
         <p>{truncateText(currentTrackName)} </p>
       </div>
@@ -49,9 +48,9 @@ const Playlist = ({ playlist, onSelectTrack, currentTrack }) => {
 };
 
 Playlist.propTypes = {
-  playlist: PropTypes.array.isRequired, // An array of track objects to be displayed in the playlist (required)
-  onSelectTrack: PropTypes.func.isRequired, // Callback function to handle the selection of a track from the playlist (required)
-  currentTrack: PropTypes.object.isRequired, // The currently playing track (required)
+  playlist: PropTypes.array.isRequired, 
+  onSelectTrack: PropTypes.func.isRequired, 
+  currentTrack: PropTypes.object.isRequired,
 };
 
 export default Playlist;

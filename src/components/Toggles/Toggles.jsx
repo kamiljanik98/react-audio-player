@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types"; 
 import { IoVolumeMute, IoVolumeMedium, IoRepeat } from "react-icons/io5";
 import styles from "./Toggles.module.scss";
 
@@ -14,12 +14,11 @@ const Toggle = ({ loop, mute, onLoopToggle, onMuteToggle }) => (
   </div>
 );
 
-// Define prop types
 Toggle.propTypes = {
-  loop: PropTypes.bool.isRequired, // Correct type for loop
-  mute: PropTypes.bool.isRequired, // Correct type for mute
-  onLoopToggle: PropTypes.func.isRequired, // Function to toggle loop
-  onMuteToggle: PropTypes.func.isRequired, // Function to toggle mute
+  loop: PropTypes.bool.isRequired, 
+  mute: PropTypes.bool.isRequired, 
+  onLoopToggle: PropTypes.func.isRequired, 
+  onMuteToggle: PropTypes.func.isRequired, 
 };
 
 export default Toggle;

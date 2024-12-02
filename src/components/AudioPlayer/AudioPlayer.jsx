@@ -1,5 +1,5 @@
 import React from "react";
-import raf from "raf"; // requestAnimationFrame polyfill
+import raf from "raf";
 import { Component } from "react";
 import ReactHowler from "react-howler";
 import Knob from "../Knob/Knob";
@@ -29,7 +29,7 @@ class AudioPlayer extends Component {
       activePlaylist: "playlist",
       showPlaylist: false,
       sortCriteria: "tempo",
-      duration: 0, // Initialize duration here
+      duration: 0,
     };
   }
 
